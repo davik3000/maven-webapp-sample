@@ -8,23 +8,26 @@ package com.mycompany.mavenwebapp;
 import java.lang.String;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 /**
  *
  * @author
  */
 public class DebugMe {
-    private static Logger log = LoggerFactory.getLogger(DebugMe.class);
-    
-    public static void main( String args[] )
-    {
-        while (true)
-        {
+
+    private static final Logger logger = LoggerFactory.getLogger(DebugMe.class);
+
+    public static void main(String args[]) {
+        logger.debug("Started...");
+        while (true) {
             try {
                 Thread.sleep(5000);
+
+                String s = "Slept for 5 sec...";
+                logger.debug(s);
             } catch (Exception e) {
             }
-            String s = "start debug";
-            log.debug(s);
         }
+        logger.debug("Out of the loop. Ending...");
     }
 }
