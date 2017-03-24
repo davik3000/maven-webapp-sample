@@ -19,7 +19,8 @@ public class DebugMe {
 
     public static void main(String args[]) {
         logger.debug("Started...");
-        while (true) {
+        boolean loop = true;
+        while (loop) {
             try {
                 Thread.sleep(5000);
 
