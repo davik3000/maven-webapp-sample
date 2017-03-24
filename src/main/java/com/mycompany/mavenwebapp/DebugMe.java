@@ -6,12 +6,15 @@
 package com.mycompany.mavenwebapp;
 
 import java.lang.String;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  *
- * @author artasda
+ * @author
  */
 public class DebugMe {
+    private static Logger log = LoggerFactory.getLogger(DebugMe.class);
+    
     public static void main( String args[] )
     {
         while (true)
@@ -21,7 +24,7 @@ public class DebugMe {
             } catch (Exception e) {
             }
             String s = "start debug";
-            System.out.println(s);
+            log.debug(s);
         }
     }
 }
